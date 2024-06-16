@@ -1,6 +1,10 @@
 # Using-Tracert-to-diagnose-network-issues
-Using Tracert to diagnose network issues
 
+<h1>Summary</h1>
+
+In this lab we will utilize the command line to diagnose an error with the internet. To do this we will use the tracert command which sends out an ICMP (Internet Control Message Protocol). The tracert command will modify the ttl (Time To Live) so that we can figure out where along the transmission of data our issue may occur.
+
+<h1>Step 1) Navigating to the command line</h1>
 To start, boot up your Windows server 2019 VM
 
 <img width="1018" alt="Screenshot 2024-06-05 at 10 08 44 AM" src="https://github.com/Jtalbert15/Using-Tracert-to-diagnose-network-issues/assets/66844406/6e6aadfd-ced9-4f65-afdc-6c3a5808f0fc">
@@ -13,6 +17,7 @@ Click on command prompt and a terminal will pop up
 
 <img width="1027" alt="Screenshot 2024-06-05 at 10 10 32 AM" src="https://github.com/Jtalbert15/Using-Tracert-to-diagnose-network-issues/assets/66844406/f6d1d77d-6423-4954-a17e-c9802e73a363">
 
+<h1>Using Ping to check connectivity </h1>
 To start lets see if we can ping an Ip address outside of our network
 
 We can do this by using the ping command followed by the site we'd like a response from
@@ -34,6 +39,8 @@ Along with that information we can see the IP address we pinged from microsoft
 The IP address we pinged was 20.231.239.246 which is a class A network
 
 Microsoft owns every IP address that begins with 20.
+
+<h1>Step 3) Using the Tracert Command</h1>
 
 Now let's use tracert. Tracert is a feature that modifies the TTL so that we can locate where along in the transmission of the data our error occurred 
 
